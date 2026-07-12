@@ -109,3 +109,84 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ── Controls panel ───────────────────────────────────────── */
+.controls {
+  display: block;        /* override the grid centering from before */
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.controls__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Option group (label + pills or swatches) ─────────────── */
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.option-group__label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.option-group__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.option-group__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* ── Pill buttons ─────────────────────────────────────────── */
+.pill {
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  border: 1px solid #2e3340;
+  background: transparent;
+  color: var(--muted);
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+
+.pill:hover {
+  border-color: #4a5060;
+  color: var(--ink);
+}
+
+.pill--active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+/* ── Color swatches ───────────────────────────────────────── */
+.swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color .15s, transform .15s;
+}
+
+.swatch:hover {
+  transform: scale(1.15);
+}
+
+.swatch--active {
+  border-color: var(--ink);
+  transform: scale(1.15);
+}
