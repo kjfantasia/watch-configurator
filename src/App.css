@@ -1,0 +1,37 @@
+/* src/App.css */
+:root { --bg:#0f1115; --panel:#171a21; --ink:#e7e9ee; --muted:#8b93a3; }
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
+
+.app__header {
+  display: flex; align-items: baseline; gap: .75rem;
+  padding: 1rem 1.25rem; border-bottom: 1px solid #232733;
+}
+.app__header h1 { font-size: 1.1rem; margin: 0; }
+.app__tag { color: var(--muted); font-size: .8rem; }
+
+.app__main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem; padding: 1rem 1.25rem;
+}
+@media (max-width: 720px) {
+  .app__main { grid-template-columns: 1fr; }
+}
+
+.canvas, .controls {
+  background: var(--panel);
+  border: 1px solid #232733;
+  border-radius: 12px;
+  min-height: 60vh;
+  display: grid; place-items: center;
+}
+.canvas__placeholder, .controls__hint { color: var(--muted); }
