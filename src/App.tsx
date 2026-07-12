@@ -6,7 +6,7 @@ import WatchCanvas from './components/WatchCanvas';
 import './App.css';
 
 export default function App() {
-  const [config, setConfig] = useState<WatchConfig>(DEFAULT_CONFIG);
+  const [config, _setConfig] = useState<WatchConfig>(DEFAULT_CONFIG);
 
   return (
     <div className="app">
